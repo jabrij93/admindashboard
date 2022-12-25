@@ -181,6 +181,7 @@ ul li {
     margin: auto;
 }
 
+/* Card project  */
 .main-content {
     display: grid;
     grid-column: 2/3;
@@ -190,8 +191,8 @@ ul li {
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 1fr;
     font-family: Roboto;
+    margin-top: -22px;
 }
-
 
 /* Article part */
 .article {
