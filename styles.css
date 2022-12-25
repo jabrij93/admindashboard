@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+html,
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    grid-template-rows: 1fr 1fr 8fr;
+    height: 100vh;
+}
+
+
+.sidebar {
+    display: grid;
+    grid-template-rows: 1fr 3fr 5fr;
+    grid-column: 1/2;
+    grid-row: 1/4;
+    background-color: #1992d4;
+    height: 100vh;
+    color: white;
+}
+
+
+/* Styling a dashboard  */
+.dashboard {
+    display: inline-flex;
+    align-items: center;
+    grid-row: 1/2;
+    margin: -30px 0px 0px 10px;
+    padding: 0px 16px 16px 10px;
+    gap: 12px;
+    font-family: Roboto;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+
+.feature-one .feature-one-logo {
+    gap: 20px;
+    padding: 10px 10px 10px 0px;
+}
+
+.feature-two .feature-two-logo {
+    gap: 20px;
+    padding: 10px 10px 10px 0px;
+}
+
+.feature-one-logo {
+    display: flex;
+    align-items: center;
+}
+
+.feature-two-logo {
+    display: flex;
+    align-items: center;
+}
+
+.feature-one .feature-one-logo {
+    margin: 10px 10px 10px -5px;
+}
+
+.feature-two .feature-two-logo {
+    margin: 10px 10px 10px -5px;
+}
+
+
+ul li {
+    list-style: none;
+}
+
+/* Font type and size in feature-one sidebar */
+.sidebar .feature-one {
+    grid-row: 2/3;
+    font-size: 24px;
+    font-family: Roboto;
+    font-weight: 500;
+}
+
+/* Change image color to white */
+.sidebar img {
+    filter: invert(100%);
+}
+
+
+/* Font type and size in feature-two sidebar */
+.sidebar .feature-two {
+    grid-row: 3/4;
+    font-size: 24px;
+    font-family: Roboto;
+    font-weight: 500;
+}
+
+/* Header one */
+.header-one {
+    display: grid;
+    align-items: center;
+    grid-column: 2/3;
+    grid-template-columns: 4fr 1fr;
+    background-color: #ffffff;
+    margin: 15px 0px 15px 40px;
+}
+
+/* Header one search part*/
+.search-bar {
+    display: flex;
+    grid-column: 1/2;
+    gap: 18px;
+}
+
+.search-bar .search {
+    background-color: #e2e8f0;
+    border: 0px solid gray;
+    border-radius: 12px;
+    width: 1400px;
+    height: 40px;
+    font-size: 18px;
+}
+
+/* Header one user part */
+.header-one .user {
+    display: flex;
+    flex-direction: row;
+    grid-column: 2/3;
+    gap: 32px;
+}
+
+.header-one .username {
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+/* Header two */
+.header-two {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-column: 2/3;
+    background-color: #ffffff;
+}
+
+.header-two .welcome {
+    display: flex;
+    flex-direction: row;
+    grid-column: 1/2;
+    margin-left: 40px;
+    font-family: Roboto;
+    font-weight: 700;
+    gap: 18px;
+}
+
+.welcome .welcome-banner .username {
+    font-size: 24px;
+    margin-top: 8px;
+}
+
+/* Header two functionalities */
+.functionalities {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    grid-column: 2/3;
+    text-align: center;
+    gap: 50px;
+}
+
+.functionalities button {
+    background-color: #1992d4;
+    border: none;
+    color: white;
+    border-radius: 28px;
+    padding: 15px 32px;
+    width: 150px;
+    text-align: center;
+    text-decoration: none;
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 20px;
+    margin: auto;
+}
+
+.main-content {
+    display: grid;
+    grid-column: 2/3;
+    grid-row: 3/4;
+    background-color: #e2e8f0;
+    grid-auto-flow: column;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    font-family: Roboto;
+}
+
+
+/* Article part */
+.article {
+    grid-column: 1/2;
+    margin: 0px 20px 0px 20px;
+
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(240px, 1fr));
+    grid-column: 2/3;
+    gap: 30px;
+}
+
+.card {
+    border: 0px solid gray;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0px 1px 1px 1px lightgray;
+    padding: 18px;
+    line-height: 1.5;
+}
+
+.card .title {
+    color: black;
+    font-size: 20px;
+    font-weight: 700;
+
+}
+
+.card p {
+    color: gray;
+}
+
+.card .card-features {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 28px;
+}
+
+/* Article part finish */
+
+/* Finish article part */
+.right-container {
+    display: flex;
+    flex-direction: column;
+    grid-column: 2/3;
+}
+
+/* Announcement part */
+.announcements {
+    display: grid;
+    align-content: flex-start;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    margin-right: 20px;
+}
+
+.announcement {
+    border: 0px solid gray;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0px 1px 1px 1px lightgray;
+    padding: 18px;
+    line-height: 1.5;
+    color: gray;
+    margin-left: 8px;
+}
+
+.announcement-title {
+    color: black;
+}
+
+/* Finish announcement part */
+
+/* Trending part */
+.trending-container {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    margin-right: 20px;
+}
+
+.trending {
+    border: 0px solid gray;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0px 1px 1px 1px lightgray;
+    padding: 18px;
+    line-height: 1.5;
+    font-family: Roboto;
+}
+
+
+.trending .trending-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 18px;
+    line-height: 0.5;
+    margin: 5px;
+}
+
+
+.users {
+    display: inline-block;
+    color: black;
+}
+
+.users p {
+    color: gray;
+}
+
+.users .bold {
+    color: black;
+}
+
+/* Finish Trending part */
