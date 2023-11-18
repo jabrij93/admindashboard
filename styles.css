@@ -9,9 +9,9 @@ body {
     display: grid;
     grid-template-columns: 1fr 5fr;
     grid-template-rows: 1fr 1fr 7fr;
-    min-height: 100vh;
+    max-height: 125vh; /* Set the maximum height to 58% of the viewport height */
+    overflow: hidden; /* This will hide any overflow beyond the specified height */
 }
-
 
 .sidebar {
     display: grid;
@@ -19,7 +19,7 @@ body {
     grid-column: 1/2;
     grid-row: 1/4;
     background-color: #1992d4;
-    min-height: 100vh;
+    max-height: 58%;
     color: white;
 }
 
