@@ -8,9 +8,8 @@ body {
 .container {
     display: grid;
     grid-template-columns: 1fr 5fr;
-    grid-template-rows: 1fr 1fr 7fr;
-    max-height: 125vh; /* Set the maximum height to 58% of the viewport height */
-    overflow: hidden; /* This will hide any overflow beyond the specified height */
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 100vh; /* Full viewport height */
 }
 
 .sidebar {
@@ -19,7 +18,6 @@ body {
     grid-column: 1/2;
     grid-row: 1/4;
     background-color: #1992d4;
-    max-height: 58%;
     color: white;
 }
 
@@ -185,12 +183,11 @@ ul li {
     display: grid;
     grid-column: 2/3;
     grid-row: 3/4;
+    padding-bottom: 30px;
     background-color: #e2e8f0;
     grid-auto-flow: column;
     grid-template-columns: 3fr 1fr;
-    grid-template-rows: 1fr 1fr;
     font-family: Roboto;
-    margin-top: -22px;
 }
 
 /* Article part */
@@ -203,17 +200,14 @@ ul li {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     grid-template-rows: repeat(auto-fit, minmax(20px, 1fr));
-    grid-column: 2/3;
     gap: 30px;
 }
 
 .card {
-    border: 0px solid gray;
-    border-radius: 12px;
     background-color: #ffffff;
-    box-shadow: 0px 1px 1px 1px lightgray;
     padding: 18px;
-
+    border-radius: 12px;
+    box-shadow: 0px 1px 1px 1px lightgray;
 }
 
 .card .title {
@@ -320,3 +314,87 @@ ul li {
 }
 
 /* Finish Trending part */
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .container {
+        grid-template-columns: 1fr 4fr;
+    }
+
+    .header-one, .header-two {
+        margin: 10px;
+    }
+
+    .search-bar .search {
+        font-size: 14px;
+        height: 25px;
+    }
+
+    .functionalities button {
+        padding: 5px 15px;
+        width: auto;
+    }
+
+    .card-container {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .sidebar {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .header-one, .header-two, .main-content {
+        grid-column: 1/2;
+    }
+
+    .header-one {
+        grid-template-columns: 3fr 1fr;
+    }
+
+    .search-bar .search {
+        font-size: 12px;
+        width: 100%;
+    }
+
+    .card-container {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .header-one, .header-two {
+        grid-template-columns: 1fr;
+    }
+
+    .search-bar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .functionalities button {
+        padding: 4px;
+        font-size: 12px;
+    }
+
+    .card {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .sidebar {
+        flex-direction: column;
+        align-items: center;
+        grid-template-rows: auto;
+    }
+}
