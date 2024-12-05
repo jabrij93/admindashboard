@@ -10,13 +10,19 @@
 
 <body>
     <div class="container">
-        <div class="sidebar">
+        <div class="sidebar" id="sidebar">
             <div class="dashboard">
                 <img src="images/dashboardlogo.svg" alt="" style="width: 48px">
                 <div class="dashboard-separate">
                     <p>Dashboard</p>
                 </div>
+                <div>
+                    <button class="sidebar-toggle" id="sidebarToggle">
+                        &#9776; <!-- Hamburger icon (3 lines) -->
+                    </button>
+                </div>
             </div>
+            
 
             <div class="feature-one">
                 <ul class="feature-one-gap">
@@ -337,5 +343,7 @@
     </div>
     </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

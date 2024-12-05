@@ -10,6 +10,7 @@ body {
     grid-template-columns: 1fr 5fr;
     grid-template-rows: 1fr 1fr 1fr;
     height: 100vh; /* Full viewport height */
+    transition: grid-template-columns 0.3s ease; /* Smooth transition */
 }
 
 .sidebar {
@@ -19,8 +20,23 @@ body {
     grid-row: 1/4;
     background-color: #1992d4;
     color: white;
+    transform: translateX(-76%); /* Sidebar visible by default */
 }
 
+.sidebar.hidden {
+    transform: translateX(0); /* Fully hide sidebar */
+    transition: transform 0.3s ease; /* Smooth hide/show effect */
+}
+
+/* Sidebar Button */
+.sidebar-toggle {
+    background-color: transparent;
+    border: solid 1px lightgray;
+    border-radius: 6px;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
 
 /* Styling a dashboard  */
 .dashboard {
@@ -191,8 +207,11 @@ ul li {
     background-color: #e2e8f0;
     grid-auto-flow: column;
     grid-template-columns: 3fr 1fr;
+    transition: margin-left 0.3s ease;
     font-family: Roboto;
 }
+
+
 
 /* Article part */
 .article {
