@@ -110,7 +110,9 @@ ul li {
     background-color: #e2e8f0;
     border: 0px solid gray;
     border-radius: 12px;
-    width: 1000px;
+    width: 80%;
+    max-width: 900px; 
+    min-width: 600px;
     height: 30px;
     font-size: 18px;
 }
@@ -183,7 +185,7 @@ ul li {
     display: grid;
     grid-column: 2/3;
     grid-row: 3/4;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
     background-color: #e2e8f0;
     grid-auto-flow: column;
     grid-template-columns: 3fr 1fr;
