@@ -7,10 +7,10 @@ body {
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 5fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: auto 1fr; /* Sidebar and main content */
+    grid-template-rows: auto auto 1fr;
     height: 100vh; /* Full viewport height */
-    transition: grid-template-columns 0.3s ease; /* Smooth transition */
+    transition: grid-template-columns 0.3s ease, transform 0.3s ease; /* Smooth transition */
 }
 
 .sidebar {
@@ -20,11 +20,11 @@ body {
     grid-row: 1/4;
     background-color: #1992d4;
     color: white;
-    transform: translateX(-76%); /* Sidebar visible by default */
+    transform: translateX(0%); /* Sidebar visible by default */
 }
 
 .sidebar.hidden {
-    transform: translateX(0); /* Fully hide sidebar */
+    transform: translateX(-76%); /* Fully hide sidebar */
     transition: transform 0.3s ease; /* Smooth hide/show effect */
 }
 
@@ -133,6 +133,7 @@ ul li {
     font-size: 18px;
 }
 
+
 /* Header one user part */
 .header-one .user {
     display: flex;
@@ -201,8 +202,8 @@ ul li {
 /* Card project  */
 .main-content {
     display: grid;
-    grid-column: 2/3;
-    grid-row: 3/4;
+    grid-column: 2 / 3; /* Starts from column 2 and spans the rest */
+    grid-row: 3 / 4;
     padding-bottom: 20px;
     background-color: #e2e8f0;
     grid-auto-flow: column;
@@ -210,8 +211,6 @@ ul li {
     transition: margin-left 0.3s ease;
     font-family: Roboto;
 }
-
-
 
 /* Article part */
 .article {
