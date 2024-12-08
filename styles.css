@@ -35,7 +35,7 @@ body {
 }
 
 .first-header button { 
-    background-color: #1992d4;
+    background-color: #4AAFE2; /* A lighter shade of #1992d4 */
     border: none;
     color: white;
     border-radius: 5px;
@@ -207,7 +207,6 @@ ul li {
     display: flex;
     grid-column: 1/2;
     gap: 18px;
-    margin-bottom: 30px;
 }
 
 .search-bar .search {
@@ -249,14 +248,14 @@ ul li {
     display: flex;
     flex-direction: row;
     grid-column: 1/2;
-    margin-left: 40px;
+    margin-left: 30px;
     font-family: Roboto;
     font-weight: 700;
     gap: 18px;
 }
 
 .welcome .welcome-banner {
-    font-size: 22px;
+    font-size: 18px;
     line-height: 8px;
 }
 
