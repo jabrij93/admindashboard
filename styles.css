@@ -101,8 +101,29 @@ body {
     width: 250px; 
     background-color: #1992d4;
     color: white;
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    z-index: 5; 
+    transform: translateX(-100%); 
+    transition: transform 0.3s ease;
 }
 
+.sidebar.open {
+    transform: translateX(0); /* Slide into view */
+}
+
+/* Close button inside the sidebar */
+.close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
 
 /* Styling a dashboard  */
 .dashboard {
@@ -199,7 +220,6 @@ ul li {
     font-size: 18px;
 }
 
-
 /* Header one user part */
 .header-one .user {
     display: flex;
@@ -268,13 +288,12 @@ ul li {
 /* Card project  */
 .main-content {
     display: grid;
-    grid-column: 2 / 3; /* Starts from column 2 and spans the rest */
-    grid-row: 3 / 4;
+    grid-column: 2/3;
+    grid-row: 3/4;
     padding-bottom: 20px;
     background-color: #e2e8f0;
     grid-auto-flow: column;
     grid-template-columns: 3fr 1fr;
-    transition: margin-left 0.3s ease;
     font-family: Roboto;
     border-radius: 2.5px;
 }
