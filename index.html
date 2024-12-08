@@ -10,7 +10,36 @@
 
 <body>
     <div class="container">
+        <!-- Hamburger button -->
+        <button class="hamburger" id="hamburgerButton">☰</button>
+
+        <div class="leftbar">
+            <div class="first-header">
+                <h2> Workouts </h2>
+                <button class="new"> NEW + </button>
+            </div>
+            <div class="search-workout-bar">
+                <div class="search-workout-container">
+                    <input type="search-workout" class="search-workout" placeholder="Search workouts...">
+                </div>
+            </div>
+            <h5 style="margin-left: 20px;">Workouts / Activities </h5>
+            <div class="list-workouts">
+                <ul>
+                    <li> Test 1 </li>
+                    <li> Test 2 </li>
+                    <li> Test 3 </li>
+                    <li> Test 4 </li>
+                    <li> Test 5 </li>
+                    <li> Test 6 </li>
+                    <li> Test 7 </li>
+                </ul>
+                <p style="margin-left: 20px;">Show more...</p>
+            </div>
+        </div>
+
         <div class="sidebar" id="sidebar">
+            <button class="close" id="closeButton">✖</button>
             <div class="dashboard">
                 <img src="images/dashboardlogo.svg" alt="" style="width: 48px">
                 <div class="dashboard-separate">
@@ -107,10 +136,10 @@
 
             <div class="user">
                 <div class="notification">
-                    <img src="images/notificationlogo.svg" alt="" style="width: 22px; margin-top:28px;">
+                    <img src="images/notificationlogo.svg" alt="" style="width: 20px; margin-top:20px;">
                 </div>
                 <div class="profilephoto">
-                    <img src="images/profilephoto1.jpg" alt="" style="width: 48px; border-radius: 50%;">
+                    <img src="images/profilephoto1.jpg" alt="" style="width: 40px; border-radius: 50%;">
                 </div>
                 <div class="username">
                     <p>Jane Doe</p>
@@ -122,7 +151,7 @@
             <div class="welcome">
                 <div class="logo">
                     <img src="images/profilephoto1.jpg" alt=""
-                        style="width: 48px; border-radius: 50%; margin-bottom:10px;">
+                        style="width: 40px; border-radius: 50%; margin-bottom:10px;">
                 </div>
                 <div class="welcome-banner">
                     <p style="font-size: 14px;"> Hi there, </p>
@@ -343,7 +372,5 @@
     </div>
     </div>
     </div>
-
-    <script src="script.js"></script>
 </body>
 </html>

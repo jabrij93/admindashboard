@@ -3,40 +3,106 @@
 html,
 body {
     margin: 0;
+    font-family: 16px 'Roboto', sans-serif; /* Use font-family instead of font */
 }
 
 .container {
     display: grid;
-    grid-template-columns: auto 1fr; /* Sidebar and main content */
-    grid-template-rows: auto auto 1fr;
-    height: 100vh; /* Full viewport height */
-    transition: grid-template-columns 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    grid-template-columns: 250px auto; /* Sidebar fixed, main content flexible */
+    grid-template-rows: auto; /* Adjust height dynamically */
+    height: 100vh; /* Full height of the viewport */
+}
+
+/* Style leftbar */
+.leftbar {
+  position: fixed; /* Position relative to the nearest positioned ancestor */
+  top: 80px; /* Adjust this to match the bottom of header-two */
+  left: 0;
+  bottom: 0;
+  width: 250px;
+  background-color: #555;
+  color: #f0f0f0;
+  overflow-y: auto;
+  z-index: 5;
+  border-radius: 2.5px;
+  box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.first-header{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 20px;
+}
+
+.first-header button { 
+    background-color: #4AAFE2; /* A lighter shade of #1992d4 */
+    border: none;
+    color: white;
+    border-radius: 5px;
+    padding: 8px 8px;
+    width: 60px;
+    text-align: center;
+    text-decoration: none;
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 14px;
+    margin: auto 0px;
+}
+
+.first-header button:hover { 
+    transform: scale(1.03); /* Slight zoom on hover */
+}
+
+.search-workout-bar {
+    display:flex;
+    flex-direction: row;
+    margin: 0px 0 0 20px;
+}
+
+.search-workout-bar .search-workout {
+    background-color: #e2e8f0;
+    border: 0px solid gray;
+    border-radius: 4px;
+    max-width: 180px; 
+    min-width: 40px;
+    height: 30px;
+    font-size: 13px;
+    font-family: Roboto;
+}
+
+.workouts-list {
+    margin: 20px;
+}
+
+.list-workouts{
+    list-style: none;
+    margin: 0px;
+}
+
+.hamburger {
+    position: fixed; /* Fixed to the viewport */
+    top: 20px; /* Adjust vertical spacing */
+    left: 20px; /* Adjust horizontal spacing */
+    z-index: 10; /* Above the sidebar */
+    background: none;
+    border: lightgray 1px solid;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 10px;
+    color: gray;
+}
+
+.hidden {
+    display: none;
 }
 
 .sidebar {
-    display: grid;
-    grid-template-rows: 1fr 3fr 5fr;
-    grid-column: 1/2;
-    grid-row: 1/4;
+    height: 100%; 
+    width: 250px; 
     background-color: #1992d4;
     color: white;
-    transform: translateX(0%); /* Sidebar visible by default */
 }
 
-.sidebar.hidden {
-    transform: translateX(-76%); /* Fully hide sidebar */
-    transition: transform 0.3s ease; /* Smooth hide/show effect */
-}
-
-/* Sidebar Button */
-.sidebar-toggle {
-    background-color: transparent;
-    border: solid 1px lightgray;
-    border-radius: 6px;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-}
 
 /* Styling a dashboard  */
 .dashboard {
@@ -79,7 +145,6 @@ body {
     margin: 10px 10px 10px -5px;
 }
 
-
 ul li {
     list-style: none;
 }
@@ -108,11 +173,12 @@ ul li {
 /* Header one */
 .header-one {
     display: grid;
+    justify-items: flex-start;
     align-items: center;
     grid-column: 2/3;
     grid-template-columns: 4fr 1fr;
     background-color: #ffffff;
-    margin: 15px 0px 15px 40px;
+    margin: 15px 0px 15px 20px;
 }
 
 /* Header one search part*/
@@ -162,14 +228,14 @@ ul li {
     display: flex;
     flex-direction: row;
     grid-column: 1/2;
-    margin-left: 40px;
+    margin-left: 30px;
     font-family: Roboto;
     font-weight: 700;
     gap: 18px;
 }
 
 .welcome .welcome-banner {
-    font-size: 22px;
+    font-size: 18px;
     line-height: 8px;
 }
 
@@ -210,6 +276,7 @@ ul li {
     grid-template-columns: 3fr 1fr;
     transition: margin-left 0.3s ease;
     font-family: Roboto;
+    border-radius: 2.5px;
 }
 
 /* Article part */
