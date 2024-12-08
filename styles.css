@@ -7,20 +7,20 @@ body {
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 5fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    height: 100vh; /* Full viewport height */
+    grid-template-columns: auto; /* Sidebar fixed, main content flexible */
+    grid-template-rows: auto; /* Adjust height dynamically */
+    height: 100vh; /* Full height of the viewport */
 }
 
 .hamburger {
-    position: absolute;
-    top: 10px;
-    left: 10px;
+    position: fixed; /* Fixed to the viewport */
+    top: 20px; /* Adjust vertical spacing */
+    left: 20px; /* Adjust horizontal spacing */
+    z-index: 10; /* Above the sidebar */
     background: none;
     border: none;
     font-size: 24px;
     cursor: pointer;
-    z-index: 10;
 }
 
 .hidden {
@@ -28,16 +28,16 @@ body {
 }
 
 .sidebar {
-    display: grid;
-    grid-template-rows: 1fr 3fr 5fr;
-    height: 100%; /* Adjusted to align with the container */
-    width: 250px; /* Define width explicitly */
+    height: 100%; 
+    width: 250px; 
     background-color: #1992d4;
     color: white;
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    z-index: 5; 
+    transform: translateX(-100%); 
     transition: transform 0.3s ease;
-    transform: translateX(-100%);
-    position: fixed; /* Ensure it overlays */
-    z-index: 5; /* Ensure it's above content */
 }
 
 .sidebar.open {
