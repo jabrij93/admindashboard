@@ -194,12 +194,12 @@ ul li {
 /* Header one */
 .header-one {
     display: grid;
-    justify-items: center;
+    justify-items: flex-start;
     align-items: center;
     grid-column: 2/3;
     grid-template-columns: 4fr 1fr;
     background-color: #ffffff;
-    margin: 15px 0px 15px 40px;
+    margin: 15px 0px 15px 20px;
 }
 
 /* Header one search part*/
