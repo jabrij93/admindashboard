@@ -3,6 +3,7 @@
 html,
 body {
     margin: 0;
+    font-family: 16px 'Roboto', sans-serif; /* Use font-family instead of font */
 }
 
 .container {
@@ -19,20 +20,63 @@ body {
   left: 0;
   bottom: 0;
   width: 250px;
-  background-color: #333;
-  color: white;
+  background-color: #555;
+  color: #f0f0f0;
   overflow-y: auto;
   z-index: 5;
+  border-radius: 2.5px;
+  box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 .first-header{
     display: flex;
     justify-content: space-between;
-    margin: 20px;
+    margin: 0px 20px;
+}
+
+.first-header button { 
+    background-color: #1992d4;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    padding: 8px 8px;
+    width: 60px;
+    text-align: center;
+    text-decoration: none;
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 14px;
+    margin: auto 0px;
+}
+
+.first-header button:hover { 
+    transform: scale(1.03); /* Slight zoom on hover */
+}
+
+.search-workout-bar {
+    display:flex;
+    flex-direction: row;
+    margin: 0px 0 0 20px;
+}
+
+.search-workout-bar .search-workout {
+    background-color: #e2e8f0;
+    border: 0px solid gray;
+    border-radius: 4px;
+    max-width: 180px; 
+    min-width: 40px;
+    height: 30px;
+    font-size: 13px;
+    font-family: Roboto;
 }
 
 .workouts-list {
     margin: 20px;
+}
+
+.list-workouts{
+    list-style: none;
+    margin: 0px;
 }
 
 .hamburger {
@@ -252,6 +296,7 @@ ul li {
     grid-auto-flow: column;
     grid-template-columns: 3fr 1fr;
     font-family: Roboto;
+    border-radius: 2.5px;
 }
 
 /* Article part */
