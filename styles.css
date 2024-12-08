@@ -12,15 +12,37 @@ body {
     height: 100vh; /* Full viewport height */
 }
 
+.hamburger {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.hidden {
+    display: none;
+}
+
 .sidebar {
     display: grid;
     grid-template-rows: 1fr 3fr 5fr;
-    grid-column: 1/2;
-    grid-row: 1/4;
+    height: 100%; /* Adjusted to align with the container */
+    width: 250px; /* Define width explicitly */
     background-color: #1992d4;
     color: white;
+    transition: transform 0.3s ease;
+    transform: translateX(-100%);
+    position: fixed; /* Ensure it overlays */
+    z-index: 5; /* Ensure it's above content */
 }
 
+.sidebar.open {
+    transform: translateX(0); /* Slide into view */
+}
 
 /* Styling a dashboard  */
 .dashboard {
@@ -62,7 +84,6 @@ body {
 .feature-two .feature-two-logo {
     margin: 10px 10px 10px -5px;
 }
-
 
 ul li {
     list-style: none;
