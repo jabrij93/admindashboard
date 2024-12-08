@@ -25,6 +25,16 @@ body {
   z-index: 5;
 }
 
+.first-header{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.workouts-list {
+    margin: 20px;
+}
+
 .hamburger {
     position: fixed; /* Fixed to the viewport */
     top: 20px; /* Adjust vertical spacing */
