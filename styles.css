@@ -18,8 +18,7 @@ body {
     display: flex;
     align-items: center; /* Aligns items vertically in the center */
     gap: 10px; /* Spacing between elements */
-    padding: 0px 20px; /* Horizontal padding */
-    margin-bottom: 10px;
+    padding: 10px 20px; /* Horizontal padding */
     background-color: #f9f9f9; /* Optional: background for visibility */
     position: fixed;
 }
