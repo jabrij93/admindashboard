@@ -11,6 +11,7 @@ body {
     grid-template-columns: 250px auto; /* Sidebar fixed, main content flexible */
     grid-template-rows: auto; /* Adjust height dynamically */
     height: 100vh; /* Full height of the viewport */
+    background-color: #f9f9f9;
 }
 
 .wotrack-logo {
@@ -20,7 +21,7 @@ body {
     padding: 0px 20px; /* Horizontal padding */
     margin-bottom: 10px;
     background-color: #f9f9f9; /* Optional: background for visibility */
-    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.5);
+    position: fixed;
 }
 
 /* Style leftbar */
@@ -205,7 +206,7 @@ ul li {
     align-items: center;
     grid-column: 2/3;
     grid-template-columns: 4fr 1fr;
-    background-color: #ffffff;
+    background-color: #f9f9f9;
     margin: 15px 0px 15px 20px;
 }
 
@@ -241,7 +242,6 @@ ul li {
     font-family: Roboto;
     font-weight: 700;
     font-size: 18px;
-    line-height: 8px;
 }
 
 /* Header two */
