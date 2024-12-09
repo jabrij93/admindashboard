@@ -233,7 +233,7 @@ ul li {
     flex-direction: row;
     justify-content: end;
     grid-column: 2/3;
-    margin-right: 30px;
+    padding: 5px;
     gap: 18px;
 }
 
@@ -263,7 +263,7 @@ ul li {
 
 .welcome .welcome-banner {
     font-size: 18px;
-    line-height: 8px;
+    line-height: 6px;
 }
 
 /* Header two functionalities */
